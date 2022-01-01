@@ -4,7 +4,7 @@
  * Desc :
  */
 
-package com.pllap.anotes.line;
+package com.pllap.alines.line;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

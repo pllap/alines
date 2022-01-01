@@ -4,7 +4,7 @@
  * Desc :
  */
 
-package com.pllap.anotes.line;
+package com.pllap.alines.line;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

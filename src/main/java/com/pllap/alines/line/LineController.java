@@ -4,7 +4,7 @@
  * Desc :
  */
 
-package com.pllap.anotes.line;
+package com.pllap.alines.line;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

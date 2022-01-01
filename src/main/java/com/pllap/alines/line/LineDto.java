@@ -4,7 +4,7 @@
  * Desc :
  */
 
-package com.pllap.anotes.line;
+package com.pllap.alines.line;
 
 import lombok.EqualsAndHashCode;
 import lombok.ToString;

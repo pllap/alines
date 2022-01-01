@@ -1,10 +1,10 @@
-package com.pllap.anotes;
+package com.pllap.alines;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AnotesApplicationTests {
+class AlinesApplicationTests {
 
     @Test
     void contextLoads() {
