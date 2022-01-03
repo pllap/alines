@@ -6,6 +6,7 @@
 
 package com.pllap.alines.line;
 
+import com.pllap.alines.utils.Hash;
 import lombok.*;
 
 import javax.persistence.*;
@@ -17,8 +18,6 @@ import java.util.List;
 @Builder
 @ToString
 @EqualsAndHashCode
-@AllArgsConstructor
-@RequiredArgsConstructor
 @Entity
 @Table(name = "line")
 public class Line {
@@ -26,6 +25,9 @@ public class Line {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private final Long id;
+
+    @Column(name = "hash")
+    private String hash;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
@@ -45,5 +47,20 @@ public class Line {
 
     public Line() {
         this.id = null;
+    }
+
+    public Line(Long id) {
+        this.id = id;
+    }
+
+    public Line(Long id, String hash, Line parentLine, List<Line> children, LocalDateTime createdDateTime, LocalDateTime updatedDateTime, String content) {
+        this.id = id;
+        this.parentLine = parentLine;
+        this.children = children;
+        this.createdDateTime = createdDateTime;
+        this.updatedDateTime = updatedDateTime;
+        this.content = content;
+
+        this.hash = Hash.sha256(this.id + this.content);
     }
 }

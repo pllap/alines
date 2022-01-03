@@ -15,10 +15,20 @@ import java.util.Objects;
 @ToString
 @EqualsAndHashCode
 public class LineDto {
+
+    private String hash;
     private Long parentId;
     private LocalDateTime createdDateTime;
     private LocalDateTime updatedDateTime;
     private String content;
+
+    public String getHash() {
+        return hash;
+    }
+
+    public void setHash(String hash) {
+        this.hash = hash;
+    }
 
     public Long getParentId() {
         return parentId;
@@ -53,6 +63,7 @@ public class LineDto {
     }
 
     public LineDto(Line source) {
+        this.hash = source.getHash();
         if (Objects.isNull(source.getParentLine())) {
             this.parentId = null;
         } else {
