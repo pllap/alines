@@ -6,23 +6,13 @@
 
 package com.pllap.alines.line;
 
+import lombok.*;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class LineContent {
-
     private String content;
-
-    public LineContent() {
-
-    }
-
-    public LineContent(String content) {
-        this.content = content;
-    }
-
-    public String get() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
+    private String hash;
 }
