@@ -1,8 +1,27 @@
-
-
+### POST 요청
 POST http://localhost:8080/line
 Content-Type: application/json
 
 {
   "content": "test content"
+}
+
+### GET 요청
+GET http://localhost:8080/line
+
+### PUT 요청
+PUT http://localhost:8080/line
+Content-Type: application/json
+
+{
+  "hash": "7b212a39b105ad253829c7ae65799402ee564590aa69dee149a9bb7ff31753df",
+  "content": "updated content"
+}
+
+### DELETE 요청
+DELETE http://localhost:8080/line
+Content-Type: application/json
+
+{
+  "hash": "7b212a39b105ad253829c7ae65799402ee564590aa69dee149a9bb7ff31753df"
 }
