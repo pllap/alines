@@ -26,7 +26,7 @@ public class Line {
     @Column(name = "id")
     private final Long id;
 
-    @Column(name = "hash")
+    @Column(name = "hash", unique = true)
     private String hash;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -61,6 +61,6 @@ public class Line {
         this.updatedDateTime = updatedDateTime;
         this.content = content;
 
-        this.hash = Hash.sha256(this.id + this.content);
+        this.hash = Hash.sha256(this.createdDateTime.toString() + this.content);
     }
 }
