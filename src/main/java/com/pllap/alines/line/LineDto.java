@@ -10,7 +10,6 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import java.time.LocalDateTime;
-import java.util.Objects;
 
 @ToString
 @EqualsAndHashCode
@@ -64,10 +63,10 @@ public class LineDto {
 
     public LineDto(Line source) {
         this.hash = source.getHash();
-        if (Objects.isNull(source.getParentLine())) {
-            this.parentId = null;
-        } else {
+        if (source.getParentLine() != null) {
             this.parentId = source.getParentLine().getId();
+        } else {
+            this.parentId = null;
         }
         this.createdDateTime = source.getCreatedDateTime();
         this.updatedDateTime = source.getUpdatedDateTime();
