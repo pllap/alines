@@ -22,6 +22,8 @@ jobs:
           character set server: 'utf8'
           mysql database: 'alines'
           mysql root password: ${{ secrets.ROOT_PASSWORD }}
+          options: >-
+            --publish
       - name: Change gradlew permissions
         run: chmod +x ./gradlew
       - name: Cache SonarCloud packages
