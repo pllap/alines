@@ -9,6 +9,14 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:latest
+        env:
+          MYSQL_ROOT_PASSWORD: ${{ secrets.ROOT_PASSWORD }}
+          MYSQL_DATABASE: 'alines'
+        ports:
+          - "3306:3306"
     steps:
       - uses: actions/checkout@v2
         with:
@@ -17,13 +25,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - uses: mirromutth/mysql-action@v1.1
-        with:
-          character set server: 'utf8'
-          mysql database: 'alines'
-          mysql root password: ${{ secrets.ROOT_PASSWORD }}
-          options: >-
-            --publish
       - name: Change gradlew permissions
         run: chmod +x ./gradlew
       - name: Cache SonarCloud packages
