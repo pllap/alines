@@ -1,9 +1,3 @@
-/*
- * Author : Hyeokwoo Kwon
- * Filename : LineService.java
- * Desc :
- */
-
 package com.pllap.alines.line;
 
 import org.springframework.stereotype.Service;

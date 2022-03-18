@@ -1,9 +1,3 @@
-/*
- * Author : Hyeokwoo Kwon
- * Filename : LineRepository.java
- * Desc :
- */
-
 package com.pllap.alines.line;
 
 import org.springframework.data.jpa.repository.JpaRepository;

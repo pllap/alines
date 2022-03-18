@@ -1,9 +1,3 @@
-/*
- * Author : Hyeokwoo Kwon
- * Filename : LineDto.java
- * Desc :
- */
-
 package com.pllap.alines.line;
 
 import lombok.EqualsAndHashCode;

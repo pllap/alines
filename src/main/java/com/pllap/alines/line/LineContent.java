@@ -1,9 +1,3 @@
-/*
- * Author : Hyeokwoo Kwon
- * Filename : LineContent.java
- * Desc :
- */
-
 package com.pllap.alines.line;
 
 import lombok.*;
