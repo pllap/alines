@@ -1,9 +1,3 @@
-/*
- * Author : Hyeokwoo Kwon
- * Filename : Hash.java
- * Desc :
- */
-
 package com.pllap.alines.utils;
 
 import org.apache.commons.codec.binary.Hex;

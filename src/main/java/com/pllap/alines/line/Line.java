@@ -1,9 +1,3 @@
-/*
- * Author : Hyeokwoo Kwon
- * Filename : Lines.java
- * Desc :
- */
-
 package com.pllap.alines.line;
 
 import com.pllap.alines.utils.Hash;

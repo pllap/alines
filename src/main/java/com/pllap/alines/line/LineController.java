@@ -1,9 +1,3 @@
-/*
- * Author : Hyeokwoo Kwon
- * Filename : LineController.java
- * Desc :
- */
-
 package com.pllap.alines.line;
 
 import org.springframework.web.bind.annotation.*;
